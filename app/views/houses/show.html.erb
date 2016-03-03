@@ -1,0 +1,10 @@
+<h1><%= @house.name.split.map(&:capitalize)*' ' %> Members</h1>
+
+
+<ul>
+	<% @house.users.each do |user| %>
+	<li><%= user.first_name %> <%= user.last_name %> | <%= link_to 'Add face', user_house_pictures_upload_path(user.id, @house.id) %></li>
+	<% end %>
+</ul>
+
+<%= link_to 'back to profile', controller: 'users', action: 'dashboard' %>

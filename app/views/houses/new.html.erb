@@ -1,0 +1,16 @@
+<h2>Create new house</h2>
+
+<%= form_for :house, url: user_houses_path(current_user.id) do |f| %>
+
+	<div>
+		<%= f.label :name %> <br>
+		<%= f.text_field :name %>
+	</div>
+	
+	<div>
+		<%= f.submit 'Create House' %>
+	</div>
+
+<% end %>
+
+<%= link_to 'back to profile', controller: 'users', action: 'dashboard' %>

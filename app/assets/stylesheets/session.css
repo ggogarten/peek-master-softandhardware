@@ -1,0 +1,70 @@
+/*// Place all the styles related to the Session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// <style>*/
+* {
+  margin: 0;
+}
+
+
+#header, .footer {
+ background-color:black;
+ color:white;
+ text-align:right;
+ padding:5px;
+ height: 50px;
+ /*position: absolute;*/
+}
+
+#nav {
+ background-color:gray;
+ height:30px;
+ padding:5px;
+ color: white;
+}
+
+#login, #signup {
+  margin: auto;
+  text-align: center;
+  padding: 5%;
+}
+
+input#email,
+input#password,
+input#user_first_name,
+input#user_last_name,
+input#user_zipcode,
+input#user_phone_number,
+input#user_email,
+input#user_password,
+input#user_password_confirmation {
+  width: 220px;
+  height: 30px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 2px inset;
+}
+
+input.form_submit {
+  width: 226px;
+  height: 37px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 0.3rem;
+  border: 2px inset;
+}
+
+#footer {
+  background-color:black;
+  color:white;
+  clear:both;
+  text-align:center;
+  padding:5px;
+  /*position: sticky;*/
+  height: 4em;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
