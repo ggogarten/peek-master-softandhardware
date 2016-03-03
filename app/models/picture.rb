@@ -69,14 +69,14 @@ class Picture < ActiveRecord::Base
     if status == 'success'
       client.account.messages.create(
         :from => from,
-        :to => "+13053262790",
-        :body => 'unlock'
+        :to => "+17864496939",
+        :body => 'open'
         )
 		elsif status == 'lock'
 			client.account.messages.create(
         :from => from,
-        :to => "+13053262790",
-        :body => 'lock'
+        :to => "+17864496939",
+        :body => 'close'
         )
     else
       client.account.messages.create(
