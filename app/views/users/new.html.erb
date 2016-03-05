@@ -1,32 +1,32 @@
 
 <div id="signup">
-	<h1>Signup!</h1>
 
-	<%= form_for :user, url: '/users' do |f| %>
 
-	<div>
-		<%= f.text_field :first_name, :placeholder => "First name"%>
-	</div>
-	<div>
-		<%= f.text_field :last_name, :placeholder => "Last name"%>
-	</div>
-	<div>
-		<%= f.telephone_field :phone_number, :placeholder => "Phone number"%>
-	</div>
-	<div>
-		<%= f.text_field :email, :placeholder => "Email"%>
-	</div>
-	<div>
-		<%= f.password_field :password, :placeholder => "Password"%>
-	</div>
-	<div>
-		<%= f.password_field :password_confirmation, :placeholder => "Password Confirmation"%>
-	</div>
-	<div>
-		<%= submit_tag nil, class: "form_submit"%>
+	<div class="md-content">
+		<h1>Signup!</h1>
+		<div id="fields">
+
+			<%= form_for :user, url: '/users' do |f| %>
+
+			<p><%= f.text_field :first_name, :placeholder => "First name"%>
+
+			<p><%= f.text_field :last_name, :placeholder => "Last name"%>
+
+			<p><%= f.telephone_field :phone_number, :placeholder => "Phone number"%>
+
+			<p><%= f.text_field :email, :placeholder => "Email"%>
+
+			<p><%= f.password_field :password, :placeholder => "Password"%>
+
+			<p><%= f.password_field :password_confirmation, :placeholder => "Password Confirmation"%>
+
+			<p><%= submit_tag nil, class: "form_submit"%>
+
+			<% end %>
+
+			<p><%= link_to 'Back', login_path %>
+		</div>
 	</div>
 
-	<% end %>
 
-	<%= link_to 'Back', login_path %>
 </div>

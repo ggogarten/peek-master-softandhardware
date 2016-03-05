@@ -7,10 +7,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-
-  <header id="header">
+<body id="body">
+  <header>
     <%= "Logo goes here" %>
   </header>
   <nav id="nav">
@@ -18,14 +16,15 @@
     Signed in as <%= current_user.first_name %> <%= current_user.last_name %> | <%= link_to "Logout", '/logout' %>
     <% else %>
     <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+    <!-- <button class="md-trigger md-setperspective" data-modal="modal-19">Slip from top</button> -->
     <% end %>
   </nav>
 
   <%= yield %>
 
 </body>
-<footer id="footer">
-  <p>Copyright (c) 2016</p>
+<footer>
+  <%= "Copyright (c) 2016" %>
 </footer>
 
 </html>

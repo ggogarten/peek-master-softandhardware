@@ -1,5 +1,9 @@
-<h1><%= @house.name.split.map(&:capitalize)*' ' %> Members</h1>
+<div id="HouseMembers">
 
+	<div class="md-content">
+
+		<h1><%= @house.name.split.map(&:capitalize)*' ' %> Members</h1>
+		<div id="fields">
 
 <ul>
 	<% @house.users.each do |user| %>
