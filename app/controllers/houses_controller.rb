@@ -9,6 +9,12 @@ class HousesController < ApplicationController
 		@house = House.find(params[:id])
 	end
 
+  def destroy
+    @house = House.find(params[:id])
+    @house.destroy
+    redirect_to root_path
+  end
+
 	def create
 		user = User.find(params[:user_id])
 		@house = user.houses.build(house_params)

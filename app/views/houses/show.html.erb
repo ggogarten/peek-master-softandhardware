@@ -7,16 +7,12 @@
 	<% end %>
 </ul>
 
-<ul>
-	<% @house.pictures.each do |picture| %>
-	<li><%= picture %> |
-	<% end %>
-</ul>
+
 
 <ul>
 <% @house.pictures.each do |picture| %>
-	<%= picture %>
-	<%= image_tag picture.image.url(:large) %>
+  <li><%= image_tag picture.image.url(:large) %>
+<%= link_to "Delete", picture_delete_path(picture), :method => :delete %> /
 <% end %>
 </ul>
 

@@ -32,6 +32,12 @@ class PicturesController < ApplicationController
 		@picture = Picture.new
 	end
 
+  def destroy
+    @picture = Picture.find(params[:id])
+    @picture.destroy
+    redirect_to root_path
+  end
+
 	def match
 		user = User.find(params[:user_id])
 		house = House.find(params[:house_id])

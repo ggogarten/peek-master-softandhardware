@@ -13,9 +13,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :houses do
-    resources :pictures
-    end
+delete '/delete/:id' => 'pictures#destroy',as: 'picture_delete'
+delete '/delete/house/:id' => 'houses#destroy',as: 'house_delete'
+  # resources :houses do
+  #   resources :pictures
+  #   end
 
 
 
