@@ -2,8 +2,10 @@ class PicturesController < ApplicationController
 
 	def upload
 		@picture = Picture.new
-
 	end
+
+  def show
+  end
 
 	def create
 		user = User.find(params[:user_id])

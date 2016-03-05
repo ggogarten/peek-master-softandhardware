@@ -4,7 +4,7 @@
 <h4>Click a house to view members</h4>
 <ul>
 <% @user.houses.each do |house| %>
-	<li><%= house.name.split.map(&:capitalize)*' ' %> | <%= link_to 'add face', user_house_pictures_upload_path(current_user.id, house.id) %> | <%= link_to 'access house', user_house_pictures_matchPage_path(current_user.id, house.id) %> | <%=  link_to 'lock house', lock_path %></li>
+	<li><%= house.name.split.map(&:capitalize)*' ' %> | <%= link_to 'Authorized Users', user_house_pictures_path(current_user.id, house.id) %> | <%= link_to 'add face', user_house_pictures_upload_path(current_user.id, house.id) %> | <%= link_to 'access house', user_house_pictures_matchPage_path(current_user.id, house.id) %> | <%=  link_to 'lock house', lock_path %></li>
 <% end %>
 </ul>
 

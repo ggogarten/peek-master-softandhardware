@@ -9,8 +9,16 @@ Rails.application.routes.draw do
       post '/upload' => 'pictures#create'
       get 'pictures/matchPage'
       post '/match' => 'pictures#match'
+      get 'pictures/gallery'
     end
   end
+
+  resources :houses do
+    resources :pictures
+    end
+
+
+
   root 'users#dashboard'
 
   get '/invite' => 'users#invite'
