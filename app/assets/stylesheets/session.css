@@ -5,29 +5,66 @@
 * {
   margin: 0;
 }
+h1 {
+  padding: 10px;
+  margin: 0;
+  background: #111f2f;
+  color: white;
+}
 
+h3 {
+  padding: 10px;
+  margin: 0;
+  background: #111f2f;
+  color: white;
+}
 
-#header, .footer {
- background-color:black;
+header, footer {
+ background-color:#111f2f;
  color:white;
  text-align:right;
- padding:5px;
- height: 50px;
- /*position: absolute;*/
+ padding-top: 20px;
+ padding-right:20px;
+ padding-bottom: 0;
+ height: 40px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align:center;
+}
+
+body {
+  background-image: url('mind-upload.jpg');
+  background-repeat: repeat;
+  /*background-attachment: scroll;*/
 }
 
 #nav {
- background-color:gray;
+ background-color:#304f74;
  height:30px;
  padding:5px;
  color: white;
 }
 
-#login, #signup {
+#login,
+#signup,
+#newHouse,
+#Dashboard,
+#Match,
+#Recognition,
+#HouseMembers {
   margin: auto;
   text-align: center;
   padding: 5%;
+  width: 550px;
+  height: 300px;
+  /*background-color: #8a735c;*/
 }
+
+
 
 input#email,
 input#password,
@@ -37,34 +74,80 @@ input#user_zipcode,
 input#user_phone_number,
 input#user_email,
 input#user_password,
-input#user_password_confirmation {
-  width: 220px;
+input#user_password_confirmation,
+input#house_name,
+input#picture_image {
+  width: 235px;
   height: 30px;
-  margin-bottom: 5px;
+  margin-top: 5px;
   font-size: 1rem;
   border-radius: 0.3rem;
   border: 2px inset;
 }
 
 input.form_submit {
-  width: 226px;
+  width: 243px;
   height: 37px;
-  margin-bottom: 5px;
+  margin-top: 5px;
   font-size: 1rem;
   color: white;
   border-radius: 0.3rem;
   border: 2px inset;
 }
 
-#footer {
-  background-color:black;
-  color:white;
-  clear:both;
-  text-align:center;
-  padding:5px;
-  /*position: sticky;*/
-  height: 4em;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+#houseLI {
+  padding: 10px;
+}
+
+.md-content {
+  min-width: 550px;
+  min-height: 300px;
+  text-align: center;
+  background: #628ec1;
+  padding-bottom: 20px;
+  opacity: 0.92;
+}
+
+#fields {
+  margin-top: 20px;
+  /*background-color: #8a735c;*/
+}
+#body {
+  /*background-color: #4c5a5e;*/
+}
+
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(143,27,15,0.8);
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
 }
