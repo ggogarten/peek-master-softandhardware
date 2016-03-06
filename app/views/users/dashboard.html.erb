@@ -11,7 +11,7 @@
 			<div id="houseLI">
 
 					<div class="inline">
-						<%= house.name.split.map(&:capitalize)*' ' %>
+						<%= house.name.split.map(&:capitalize)*' ' %><%= ": " %>
 					</div>
 					<div class="inline">
 						<%= image_tag("manage.png", size: "50x50", alt: "Manage House") %>  <br>
