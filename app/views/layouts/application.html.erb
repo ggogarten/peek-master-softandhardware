@@ -13,10 +13,9 @@
   </header>
   <nav id="nav">
     <% if current_user %>
-    Signed in as <%= current_user.first_name %> <%= current_user.last_name %> | <%= link_to "Logout", '/logout' %>
+    Signed in as <%= current_user.first_name %> <%= current_user.last_name %> | <%= link_to 'Logout', logout_path, class:"btn" %>
     <% else %>
-    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-    <!-- <button class="md-trigger md-setperspective" data-modal="modal-19">Slip from top</button> -->
+    <%= link_to 'Login', login_path, class:"btn" %>  <%= link_to 'Signup', signup_path, class:"btn" %>
     <% end %>
   </nav>
 
