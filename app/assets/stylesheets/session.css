@@ -4,6 +4,7 @@
 // <style>*/
 * {
   margin: 0;
+  font-family: "Lato", sans-serif;
 }
 h1 {
   padding: 10px;
@@ -16,10 +17,10 @@ header, footer {
  background-color:#111f2f;
  color:white;
  text-align:right;
- padding-top: 20px;
+ padding-top: 5px;
  padding-right:20px;
  padding-bottom: 0;
- height: 40px;
+ height: 55px;
 }
 
 footer {
@@ -30,9 +31,8 @@ footer {
 }
 
 body {
-  background-image: url('mind-upload.jpg');
-  background-repeat: repeat;
-  /*background-attachment: scroll;*/
+  background-image: url('background1.jpg');
+  background-size: cover;
 }
 
 #nav {
@@ -103,11 +103,8 @@ input.form_submit {
 
 #fields {
   margin-top: 20px;
-  /*background-color: #8a735c;*/
 }
-#body {
-  /*background-color: #4c5a5e;*/
-}
+
 
 .md-modal {
 	position: fixed;
