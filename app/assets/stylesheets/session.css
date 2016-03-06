@@ -126,6 +126,7 @@ input.form_submit {
 }
 #houseLI div.inline:first-child{
   margin-right: auto;
+
 }
 
 .md-content {
@@ -155,13 +156,6 @@ input.form_submit {
 div.inline { float:left; }
 .clearBoth { clear:both; }
 
-/*.dashboard {
-  color: #fff;
-  padding: 10px;
-  background-color: #628ec1;
-  height: 50px;
-  margin-left: 5px;
-  border-radius: 2px;
-  width: 80px;
-  font-size: 20;
-}*/
+.dashboard {
+  padding: 5px;
+}
