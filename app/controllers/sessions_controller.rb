@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
         format.json do
           user.get_or_create_api_key
-          render json: {success: true, extras: {userProfileModel: user, sessionId: user.api_key}}
+          render json: {success: true, extras: {userProfileModel: user, sessionId: user.api_key, houses: user.houses}}
         end	
       else
       	format.html { redirect_to '/login' }
@@ -25,8 +25,17 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-   session[:user_id] = nil
-   user.update(api_key: nil)
-   redirect_to '/login'
- end
+    respond_to do |format|
+      format.html do
+        session[:user_id] = nil
+        redirect_to '/login'
+      end
+
+      format.json do
+        user = User.find_by(api_key: params[:api_key])
+        user.update(api_key: nil)
+        render json: {success: true}
+      end
+    end
+  end
 end
