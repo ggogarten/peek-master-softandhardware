@@ -1,18 +1,24 @@
+<div id="Recognition">
 
-<h1>Add Pictures for Facial Recognition</h1>
 
-<%= form_for @picture, url: user_house_upload_path, html: {multipart: true} do |f| %>
-  <p>
-    <%= f.file_field :image, type: :file, multiple: true %>
-  </p>
-  <p>
-    <%= f.file_field :image, type: :file, multiple: true %>
-  </p>
-  <p>
-    <%= f.file_field :image, type: :file, multiple: true %>
-  </p>
+  <div class="md-content">
+    <h1>Add Pictures for Facial Recognition</h1>
+    <div id="fields">
 
-  	<%= f.submit 'Send pictures' %>
-<% end %>
+      <%= form_for @picture, url: user_house_upload_path, html: {multipart: true} do |f| %>
 
-<%= link_to 'back to profile', controller: 'users', action: 'dashboard' %>
+      <p><%= f.file_field :image, type: :file, multiple: true %>
+
+      <p><%= f.file_field :image, type: :file, multiple: true %>
+
+      <p><%= f.file_field :image, type: :file, multiple: true %>
+
+
+        <p><%= f.submit 'Send pictures' %>
+        <% end %>
+
+      <%= link_to 'back to profile', controller: 'users', action: 'dashboard' %>
+    </div>
+  </div>
+
+</div>

@@ -1,11 +1,22 @@
-<h1>Welcome to the Dashboard</h1>
+<div id="Dashboard">
 
-<h3>Your Houses</h3>
-<!-- <h4>Click a house to view members</h4> -->
-<ul>
-<% @user.houses.each do |house| %>
-	<li><%= house.name.split.map(&:capitalize)*' ' %> | <%= link_to 'Manage House', user_house_path(current_user.id, house.id) %> | <%= link_to 'Delete House', house_delete_path(house), :method => :delete %> | <%= link_to 'add face', user_house_pictures_upload_path(current_user.id, house.id) %> | <%= link_to 'access house', user_house_pictures_matchPage_path(current_user.id, house.id) %> | <%=  link_to 'lock house', lock_path %></li>
-<% end %>
-</ul>
+	<div class="md-content">
+		<h1>Welcome to the Dashboard</h1>
+		<div id="fields">
 
-<%= link_to 'Add new house', new_user_house_path(current_user.id) %>
+			<h2>Your Houses</h2>
+			<h3>Click a house to view members</h3>
+
+			<% @user.houses.each do |house| %>
+			<div id="houseLI">
+				<%= image_tag("small_house_blue.png", size: "50x50", alt: "House Icon") %> <%= image_tag("Icons.png", size: "375x50", alt: "Icons") %> <br>
+				 <%= house.name.split.map(&:capitalize)*' ' %> | <%= link_to 'Manage House', user_house_path(current_user.id, house.id) %> | <%= link_to 'Delete House', house_delete_path(house), :method => :delete %> | <%= link_to 'access house', user_house_pictures_matchPage_path(current_user.id, house.id) %> | <%=  link_to 'lock house', lock_path %>
+			</div>
+			<% end %>
+
+			<%= link_to 'Add new house', new_user_house_path(current_user.id) %>
+
+		</div>
+	</div>
+
+</div>
