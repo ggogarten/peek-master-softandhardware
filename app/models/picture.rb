@@ -65,23 +65,23 @@ class Picture < ActiveRecord::Base
 
   def self.text(status)
     client = Twilio::REST::Client.new ENV['account_sid'], ENV['auth_token']
-    from = '+17863726460'
+    from = '+19546136144' 
     if status == 'success'
       client.account.messages.create(
         :from => from,
-        :to => "+17864496939",
+        :to => "+13053354270",
         :body => 'open'
         )
 		elsif status == 'lock'
 			client.account.messages.create(
         :from => from,
-        :to => "+17864496939",
+        :to => "+13053354270",
         :body => 'close'
         )
     else
       client.account.messages.create(
         :from => from,
-        :to => "+13053262790",
+        :to => "+13053354270",
         :body => "Face Didn't Match"
         )
     end
