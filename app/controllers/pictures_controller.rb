@@ -55,7 +55,7 @@ class PicturesController < ApplicationController
 		    end
 		  end
 			format.json do
-				user = User.find_by_api_key(params[:api_pey])
+				user = User.find_by_api_key(params[:api_key])
 				house = House.find_by_name(params[:name])
 				if params[:image]
 					@picture = user.pictures.build(image: params[:image])
