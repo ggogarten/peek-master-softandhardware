@@ -57,7 +57,10 @@ class PicturesController < ApplicationController
 			format.json do
 				user = current_user
 				house = House.find_by_name(params[:name])
-				ap params
+				if params[:image]
+					binding.pry
+					@picture = user.pictures.build(image: params[:image])
+				end
 			end
 		end
 	end
