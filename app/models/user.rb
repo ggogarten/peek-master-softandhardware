@@ -12,4 +12,11 @@ class User < ActiveRecord::Base
 
 	has_many :pictures
 
+	def get_or_create_api_key
+		return api_key if api_key
+		o = [('a'..'z'), ('A'..'Z'), ('0'..'9')].map { |i| i.to_a }.flatten
+		key = (0...8).map { o[rand(o.length)] }.join
+    self.update( api_key: key )
+    return api_key
+	end
 end
