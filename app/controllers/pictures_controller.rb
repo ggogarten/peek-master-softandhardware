@@ -59,6 +59,8 @@ class PicturesController < ApplicationController
 				house = House.find_by_name(params[:name])
 				if params[:image]
 					@picture = user.pictures.build(image: params[:image])
+					@picture.house_id = house.id
+					@picture.save
 				end
 			end
 		end
