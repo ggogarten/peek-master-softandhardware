@@ -64,9 +64,9 @@ class PicturesController < ApplicationController
 					house_name = @picture.house.name
 					Picture.recognize(url, house_name)
 					if successtest == 'success'
-						render {success: true}
+						render json: {success: true}
 					else
-						render {success: false, error: "picture didn't match"}
+						render json: {success: false, error: "epicture didn't match"}
 				end
 			end
 		end
