@@ -5,11 +5,14 @@
 * {
   margin: 0;
   font-family: "Lato", sans-serif;
+  text-decoration: none;
 }
+
 html {
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
 }
+
 h1 {
   padding: 10px;
   margin: 0;
@@ -21,6 +24,12 @@ h3 {
   padding: 5px;
 }
 
+.nav-header-wrapper {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
 header, footer {
  background-color:#111f2f;
  color:white;
@@ -29,6 +38,7 @@ header, footer {
  padding-right:20px;
  padding-bottom: 0;
  height: 55px;
+
 }
 
 footer {
@@ -39,9 +49,12 @@ footer {
   padding-top: 20px;
 }
 
-body {
-  background-image: url('background1.jpg');
+#body {
+  background-image: url('<%= image_path "background1.jpg" %>');
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #nav {
@@ -65,7 +78,6 @@ body {
   padding: 5%;
   width: 550px;
   height: 300px;
-  /*background-color: #8a735c;*/
 }
 
 input#email,
@@ -87,6 +99,7 @@ input.send_picture {
   border-radius: 0.3rem;
   border: 2px inset;
 }
+
 input.send_picture {
   width: 250px;
   height: 42px;
@@ -124,6 +137,7 @@ input.form_submit {
   display: flex;
   align-items: center;
 }
+
 #houseLI div.inline:first-child{
   margin-right: auto;
 
@@ -136,13 +150,51 @@ input.form_submit {
   background: #628ec1;
   padding-bottom: 20px;
   opacity: 0.92;
+  margin-top: 110px;
+}
+.md-content-splash {
+  /*text-align: center;*/
+  background: #628ec1;
+  opacity: 0.92;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: solid black;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  width: 800px;
+}
+.md-content-splash:nth-child(2) {
+  margin-top: 110px;
+}
+.md-content-splash:last-child {
+  margin-bottom: 85px;
+}
+
+.index{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #fields {
   margin-top: 10px;
   margin-bottom: 10px;
+  /*display: flex;*/
+  align-items: center;
+  overflow: hidden;
 }
-
+#fields-home {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
 
 .btn {
   color: #fff;
@@ -150,12 +202,33 @@ input.form_submit {
   background-color: #628ec1;
   margin-left: 5px;
   border-radius: 2px;
-  /*width: 80px;*/
   font-size: 20;
 }
+
 div.inline { float:left; }
 .clearBoth { clear:both; }
 
-.dashboard {
+.inline {
   padding: 5px;
+  color: white;
+}
+.dashboard {
+  color: white;
+}
+
+.links {
+  color: black;
+}
+video{
+  flex-grow: 2;
+  margin-right: 10px;
+}
+
+#aboutUs{
+  width: 800px;
+  height: 375px;
+  background: grey;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
 }

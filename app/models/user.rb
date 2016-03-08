@@ -7,7 +7,9 @@ class User < ActiveRecord::Base
 
 	has_many :house_users
 	has_many :houses, through: :house_users
+
 	has_secure_password
 
 	has_many :pictures
+
 end

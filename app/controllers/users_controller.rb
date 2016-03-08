@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_filter :authorize, except: [:new, :create]
+  before_filter :authorize, except: [:new, :create , :home]
 
   # GET /users
   # GET /users.json
@@ -8,12 +8,16 @@ class UsersController < ApplicationController
     @user = User.find(current_user)
   end
 
+  def home
+  end
+
   # GET /users/1
   # GET /users/1.json
   def show
   end
 
-  # GET /users/new
+  # GET /users/news
+
   def new
     @user = User.new
   end
@@ -30,7 +34,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to '/', notice: 'User was successfully created.' }
+        format.html { redirect_to dash_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }

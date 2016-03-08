@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # get 'pictures/upload'
   # post '/upload' => 'pictures#create'
 
+  root :to => 'users#home'
+
   resources :users do
     resources :houses do
       get 'pictures/upload'
@@ -19,9 +21,7 @@ delete '/delete/house/:id' => 'houses#destroy',as: 'house_delete'
   #   resources :pictures
   #   end
 
-
-
-  root 'users#dashboard'
+  get '/dashboard' => 'users#dashboard', as: 'dash' 
 
   get '/invite' => 'users#invite'
 
