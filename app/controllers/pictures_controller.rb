@@ -49,7 +49,6 @@ class PicturesController < ApplicationController
 					@picture.save
 					url = @picture.image.url
 					house_name = @picture.house.name
-					number = current_user.phone_number
 					Picture.recognize(url, house_name)
 		    	redirect_to root_path
 		    end
@@ -61,6 +60,13 @@ class PicturesController < ApplicationController
 					@picture = user.pictures.build(image: params[:image])
 					@picture.house_id = house.id
 					@picture.save
+					url = @picture.image.url
+					house_name = @picture.house.name
+					Picture.recognize(url, house_name)
+					if successtest == 'success'
+						render {success: true}
+					else
+						render {success: false, error: "picture didn't match"}
 				end
 			end
 		end

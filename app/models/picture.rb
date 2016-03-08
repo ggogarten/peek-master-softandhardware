@@ -42,8 +42,8 @@ class Picture < ActiveRecord::Base
 
     successtest = response['images'][0]['transaction']['status']
     # ap successtest
-    successtest
     Picture.text(successtest)
+    return successtest
   end
 
   def self.remove_subject(person, house_name)
