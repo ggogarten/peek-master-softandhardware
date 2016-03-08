@@ -39,18 +39,27 @@ class PicturesController < ApplicationController
   end
 
 	def match
-		user = User.find(params[:user_id])
-		house = House.find(params[:house_id])
-		if params[:picture][:image][0]
-			@picture = user.pictures.build(image: params[:picture][:image][0])
-			@picture.house_id = house.id
-			@picture.save
-			url = @picture.image.url
-			house_name = @picture.house.name
-			number = current_user.phone_number
-			Picture.recognize(url, house_name)
-    	redirect_to root_path
-    end
+		respond_to do |format|
+			format.html do
+				user = User.find(params[:user_id])
+				house = House.find(params[:house_id])
+				if params[:picture][:image][0]
+					@picture = user.pictures.build(image: params[:picture][:image][0])
+					@picture.house_id = house.id
+					@picture.save
+					url = @picture.image.url
+					house_name = @picture.house.name
+					number = current_user.phone_number
+					Picture.recognize(url, house_name)
+		    	redirect_to root_path
+		    end
+		  end
+			format.json do
+				user = current_user
+				house = House.find_by_name(params[:name])
+				ap params
+			end
+		end
 	end
 
   def remove_subject

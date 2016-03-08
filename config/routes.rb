@@ -19,7 +19,7 @@ delete '/delete/house/:id' => 'houses#destroy',as: 'house_delete'
   #   resources :pictures
   #   end
 
-
+  post '/match' => 'pictures#match'
 
   root 'users#dashboard'
 
