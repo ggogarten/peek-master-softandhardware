@@ -55,10 +55,9 @@ class PicturesController < ApplicationController
 		    end
 		  end
 			format.json do
-				user = current_user
+				user = User.find_by_api_key(params[:api_pey])
 				house = House.find_by_name(params[:name])
 				if params[:image]
-					binding.pry
 					@picture = user.pictures.build(image: params[:image])
 				end
 			end
