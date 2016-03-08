@@ -12,7 +12,7 @@ class HousesController < ApplicationController
   def destroy
     @house = House.find(params[:id])
     @house.destroy
-    redirect_to root_path
+    redirect_to dash_path
   end
 
 	def create
@@ -22,7 +22,7 @@ class HousesController < ApplicationController
 		respond_to do |format|
 			if @house.save
 				HouseUser.create(house_id: @house.id, user_id: current_user.id)
-				format.html {redirect_to root_path, notice: 'House made'}
+				format.html {redirect_to dash_path, notice: 'House made'}
 			else
 				format.html {render :new}
 			end

@@ -2,9 +2,9 @@
 <div id="newHouse">
 
 
-	<div>
-		<%= image_tag("small_house_blue.png", size: "60x60", alt: "House Icon") %>
-	</div>
+	<!-- <div> -->
+		<!-- <%= image_tag("small_house_blue.png", size: "60x60", alt: "House Icon") %> -->
+	<!-- </div> -->
 
 	<div class="md-content">
 		<h1>Create new house</h1>
@@ -12,13 +12,13 @@
 
 			<%= form_for :house, url: user_houses_path(current_user.id) do |f| %>
 
-			<p><%= f.text_field :name, :placeholder => "House Name"%>
+			<p><%= f.text_field :name, :placeholder => "House Name"%></p>
 
-				<p><%= submit_tag nil, class: "form_submit" %>
+				<p><%= submit_tag nil, class: "form_submit" %></p>
 
 					<% end %>
 					<br>
-					<p><%= link_to 'back to profile', controller: 'users', action: 'dashboard' %>
+					<p><%= link_to 'back to profile', controller: 'users', action: 'dashboard', class:"links"  %></p>
 					</div>
 				</div>
 

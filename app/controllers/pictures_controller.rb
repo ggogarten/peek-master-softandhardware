@@ -65,7 +65,7 @@ class PicturesController < ApplicationController
 					@picture.save
 					url = @picture.image.url
 					house_name = @picture.house.name
-					Picture.recognize(url, house_name)
+					successtest = Picture.recognize(url, house_name)
 					if successtest == 'success'
 						render json: {success: true}
 					else
@@ -96,8 +96,21 @@ class PicturesController < ApplicationController
 			redirect_to root_path
 		end
 
-		private
+	#light functionality
+	 def lights_on
+	   status = 'on'
+	   Picture.textlights(status)
+	   redirect_to root_path
+	 end
 
+	 def lights_off
+	        status = 'off'
+	        Picture.textlights(status)
+	        redirect_to root_path
+	    end
+
+
+  private
 		def pic_params
 			params.require(:picture).permit(:image)
 		end

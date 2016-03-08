@@ -86,4 +86,26 @@ class Picture < ActiveRecord::Base
         )
     end
   end
+	#new functionality
+
+	 def self.textlights(status)
+	   client = Twilio::REST::Client.new ENV['account_sid'], ENV['auth_token']
+	   from = '+17863726460'
+	   if status == 'on'
+	     ap 'lights on'
+	     client.account.messages.create(
+	       :from => from,
+	       :to => "+14159685257",
+	       :body => '#LIGHTSON'
+	       )
+	        elsif status == 'off'
+	            client.account.messages.create(
+	       :from => from,
+	       :to => "+14159685257",
+	       :body => '#LIGHTSOFF'
+	       )
+	   end
+	 end
+
+
 end
