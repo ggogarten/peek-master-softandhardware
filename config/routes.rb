@@ -21,7 +21,7 @@ delete '/delete/house/:id' => 'houses#destroy',as: 'house_delete'
   #   resources :pictures
   #   end
 
-  get '/dashboard' => 'users#dashboard', as: 'dash' 
+  get '/dashboard' => 'users#dashboard', as: 'dash'
 
   get '/invite' => 'users#invite'
 
@@ -32,6 +32,8 @@ delete '/delete/house/:id' => 'houses#destroy',as: 'house_delete'
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
   get '/lock' => 'pictures#lock'
+  get '/lights_on' => 'pictures#lights_on'
+  get '/lights_off' => 'pictures#lights_off'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

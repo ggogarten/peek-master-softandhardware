@@ -73,6 +73,20 @@ class PicturesController < ApplicationController
 		redirect_to root_path
 	end
 
+	#light functionality
+	 def lights_on
+	   status = 'on'
+	   Picture.textlights(status)
+	   redirect_to root_path
+	 end
+
+	 def lights_off
+	        status = 'off'
+	        Picture.textlights(status)
+	        redirect_to root_path
+	    end
+
+
   private
 
   def pic_params
