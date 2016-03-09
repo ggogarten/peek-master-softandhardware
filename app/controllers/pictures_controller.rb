@@ -93,20 +93,20 @@ class PicturesController < ApplicationController
 		def lock
 			lock = 'lock'
 			Picture.text(lock)
-			redirect_to root_path
+			redirect_to dashboard_path
 		end
 
 	#light functionality
 	 def lights_on
 	   status = 'on'
 	   Picture.textlights(status)
-	   redirect_to root_path
+	   redirect_to dashboard_path
 	 end
 
 	 def lights_off
 	        status = 'off'
 	        Picture.textlights(status)
-	        redirect_to root_path
+	        redirect_to dashboard_path
 	    end
 
 
