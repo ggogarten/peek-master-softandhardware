@@ -21,6 +21,9 @@ delete '/delete/house/:id' => 'houses#destroy',as: 'house_delete'
   #   resources :pictures
   #   end
 
+
+  post '/match' => 'pictures#match'
+
   get '/dashboard' => 'users#dashboard', as: 'dash'
 
   get '/invite' => 'users#invite'
