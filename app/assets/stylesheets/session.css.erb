@@ -25,6 +25,8 @@ h1 {
   margin: 0;
   background: #111f2f;
   color: white;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 
 h3 {
@@ -85,6 +87,7 @@ footer {
   padding: 5%;
   width: 550px;
   height: 300px;
+  border-radius: 7px;
 }
 
 input#email,
@@ -158,6 +161,7 @@ input.form_submit {
   padding-bottom: 20px;
   opacity: 0.92;
   margin-top: 110px;
+  border-radius: 7px;
 }
 
 .md-content-splash {
@@ -170,7 +174,8 @@ input.form_submit {
   margin-right: auto;
   display: flex;
   justify-content: center;
-  width: 800px;
+  min-width: 800px;
+  border-radius: 7px;
 }
 .md-content-splash:nth-child(2) {
   margin-top: 110px;
@@ -224,17 +229,36 @@ div.inline { float:left; }
 .links {
   color: black;
 }
-video{
-  flex-grow: 2;
-  margin-right: 10px;
+/*video{*/
+  /*flex-grow: 2;*/
+  /*margin-right: 10px;*/
+/*}*/
+
+
+#video-display {
+  height: 350px;
+  /*float: left;*/
+  /*background-size: cover;*/
+}
+
+.full-vid{
+  float: left;
+  /*width="500";*/
+  /*height="300";*/
+  /*width: 100px ;*/
+  /*height: auto;*/
 }
 
 #aboutUs{
   width: 300px;
   height: 300px;
+  position: relative;
+  top: 50px;
+  left: 20px;
   background: rgba(255, 228, 207, 0.85);
   display: flex;
   align-items: center;
   padding: 23px;
   border-width: 12px;
+  border-radius: 7px;
 }
