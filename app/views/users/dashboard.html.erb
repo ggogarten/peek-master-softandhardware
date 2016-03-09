@@ -1,0 +1,51 @@
+<div id="Dashboard">
+
+	<div class="md-content">
+		<h1>Welcome to the Dashboard</h1>
+		<div id="fields">
+
+			<h2>Your Houses</h2>
+			<h3>Click a house to view members</h3>
+
+			<% @user.houses.each do |house| %>
+			<div id="houseLI">
+
+					<div class="inline">
+						<%= house.name.split.map(&:capitalize)*' ' %><%= ": " %>
+					</div>
+					<div class="inline">
+						<%= image_tag("manage.png", size: "50x50", alt: "Manage House") %>  <br>
+				  	<%= link_to ' Manage House ', user_house_path(current_user.id, house.id), class:"dashboard" %>
+					</div>
+					<div class="inline">
+						<%= image_tag("delete.png", size: "40x50", alt: "Delete House") %>  <br>
+						<%= link_to ' Delete House ', house_delete_path(house), :method => :delete, class:"dashboard" %>
+					</div>
+					<div class="inline">
+						<%= image_tag("access.png", size: "40x50", alt: "Access House") %>  <br>
+						<%= link_to ' Access House ', user_house_pictures_matchPage_path(current_user.id, house.id), class:"dashboard" %>
+					</div>
+					<div class="inline">
+						<%= image_tag("lock.png", size: "40x50", alt: "Lock House") %>  <br>
+						<%=  link_to ' Lock House ', lock_path, class:"dashboard" %>
+					</div>
+					<div class="inline">
+						<%= image_tag("lightsOn.png", size: "38x50", alt: "Lights On") %>  <br>
+						<%=  link_to ' Lights On ', lights_on_path, class:"dashboard" %>
+					</div>
+					<div class="inline">
+						<%= image_tag("lightsOff.png", size: "38x50", alt: "Lights Off") %>  <br>
+						<%=  link_to ' Lights Off ', lights_off_path, class:"dashboard" %>
+					</div>
+					<br class="clearBoth" /><!-- Clear both side for the float! -->
+
+
+			</div>
+			<% end %>
+			<br>
+			<%= link_to 'Add new house', new_user_house_path(current_user.id), class:"links" %>
+
+		</div>
+	</div>
+
+</div>

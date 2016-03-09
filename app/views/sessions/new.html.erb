@@ -1,0 +1,20 @@
+
+<div id="login">
+
+    <div class="md-content">
+
+        <h1>Login</h1>
+        <div id="fields">
+          <%= form_tag '/login' do %>
+
+          <p><%= text_field_tag :email, value = nil, :placeholder => "Email address"%></p>
+
+          <p><%= password_field_tag :password, value = nil, :placeholder => "Password"%></p>
+
+          <p><%= submit_tag nil, class: "form_submit"%></p>
+
+          <% end %>
+
+      </div>
+    </div>
+  </div>

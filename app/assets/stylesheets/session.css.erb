@@ -1,0 +1,265 @@
+/*// Place all the styles related to the Session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// <style>*/
+* {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+}
+a {
+  color: white;
+}
+
+#peek-Description {
+  font-size: 20px;
+}
+
+#pStyle{
+  width: 90%;
+  margin: 7px auto;
+}
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+h1 {
+  padding: 10px;
+  margin: 0;
+  background: #111f2f;
+  color: white;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  text-align: center;
+}
+
+h3 {
+  padding: 5px;
+}
+
+.nav-header-wrapper {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+header, footer {
+ background-color:#111f2f;
+ color:white;
+ text-align:right;
+ padding-top: 5px;
+ padding-right:20px;
+ padding-bottom: 0;
+ height: 55px;
+
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align:center;
+  padding-top: 20px;
+}
+
+#body {
+  background-image: url('<%= image_path "background1.jpg" %>');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#nav {
+ background-color:#304f74;
+ height:50px;
+ color: white;
+ display: flex;
+ align-items: center;
+ padding-left: 25px;
+}
+
+#login,
+#signup,
+#newHouse,
+#Dashboard,
+#Match,
+#Recognition,
+#HouseMembers {
+  margin: auto;
+  text-align: center;
+  padding: 5%;
+  width: 550px;
+  height: 300px;
+  border-radius: 7px;
+}
+
+input#email,
+input#password,
+input#user_first_name,
+input#user_last_name,
+input#user_zipcode,
+input#user_phone_number,
+input#user_email,
+input#user_password,
+input#user_password_confirmation,
+input#house_name,
+input#picture_image,
+input.send_picture {
+  width: 235px;
+  height: 30px;
+  margin-top: 5px;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 2px inset;
+}
+
+input.send_picture {
+  width: 250px;
+  height: 42px;
+  color: white;
+}
+
+input#picture_image{
+  background: -webkit-linear-gradient(top, #628ec1, black);
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 4px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  color: white;
+  margin: 1px 0;
+  padding-top: 10px;
+}
+
+input.form_submit {
+  width: 243px;
+  height: 37px;
+  margin-top: 5px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 0.3rem;
+  border: 2px inset;
+}
+
+#houseLI {
+  font-weight: bold;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#houseLI div.inline:first-child{
+  margin-right: auto;
+
+}
+
+.md-content {
+  min-width: 600px;
+  min-height: 300px;
+  text-align: center;
+  background: #628ec1;
+  padding-bottom: 20px;
+  opacity: 0.92;
+  margin-top: 110px;
+  border-radius: 7px;
+}
+
+.md-content-splash {
+  background: #628ec1;
+  /*opacity: 1;*/
+  /*padding: 10px;*/
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  min-width: 800px;
+  min-height: 400px;
+  border-radius: 7px;
+  margin-top: 20px;
+}
+.md-content-splash:nth-child(2) {
+  margin-top: 110px;
+}
+.md-content-splash:last-child {
+  margin-bottom: 85px;
+}
+
+.md-content-splash-FAQ {
+  background: #111f2f;
+  opacity: 0.92;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  min-width: 800px;
+  min-height: 400px;
+  border-radius: 7px;
+  color: white;
+}
+
+.index{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#fields {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  overflow: hidden;
+}
+#fields-home {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.btn {
+  color: #fff;
+  padding: 10px;
+  background-color: #628ec1;
+  margin-left: 5px;
+  border-radius: 2px;
+  font-size: 20;
+}
+
+div.inline { float:left; }
+.clearBoth { clear:both; }
+
+.inline {
+  padding: 5px;
+  color: white;
+}
+.dashboard {
+  color: white;
+}
+
+.links {
+  color: black;
+}
+
+
+#video-display {
+  height: 539px;
+  width: 800px;
+
+}
+#video-container{
+  align-items: center;
+}

@@ -1,0 +1,32 @@
+
+<div id="signup">
+
+
+	<div class="md-content">
+		<h1>Signup!</h1>
+		<div id="fields">
+
+			<%= form_for :user, url: '/users' do |f| %>
+
+			<p><%= f.text_field :first_name, :placeholder => "First name"%></p>
+
+			<p><%= f.text_field :last_name, :placeholder => "Last name"%></p>
+
+			<p><%= f.telephone_field :phone_number, :placeholder => "Phone number"%></p>
+
+			<p><%= f.text_field :email, :placeholder => "Email"%></p>
+
+			<p><%= f.password_field :password, :placeholder => "Password"%></p>
+
+			<p><%= f.password_field :password_confirmation, :placeholder => "Password Confirmation"%></p>
+
+			<p><%= submit_tag nil, class: "form_submit"%></p>
+
+			<% end %>
+			<br>
+			<p><%= link_to 'Back', login_path, class:"links" %></p>
+
+		</div>
+	</div>
+
+</div>
